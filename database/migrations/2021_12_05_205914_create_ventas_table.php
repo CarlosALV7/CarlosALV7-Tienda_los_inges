@@ -15,7 +15,13 @@ class CreateVentasTable extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->decimal('monto',5 ,2); 
+            $table->decimal('iva',5 ,2);
+            $table->decimal('total',5 ,2);
+            $table->string('rol', 45);
+            $table->string('nombre_producto', 45);
+            $table->integer('cantidad', 3);
+            $table->decimal('costo',5 ,2);
         });
     }
 

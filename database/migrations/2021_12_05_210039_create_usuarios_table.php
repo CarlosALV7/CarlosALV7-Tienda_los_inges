@@ -15,7 +15,16 @@ class CreateUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->decimal('sueldo',5 ,2); 
+            $table->string('apellido_paterno', 45);
+            $table->string('apellido_materno', 45);
+            $table->string('nombre', 45);
+            $table->date('fecha_nacimiento');
+            $table->string('rol', 45);
+            $table->string('email')->unique();
+            $table->string('password', 45);
+            $table->integer('direccion'); 
+            $table->foreign('direccion')->references('id')->on('direcciones');
         });
     }
 
