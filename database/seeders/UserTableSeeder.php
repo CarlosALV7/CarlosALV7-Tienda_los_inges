@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
         'email'=>'dominio@gmail.com',
         'password'=>Hash::make('123456789'),
         'direccion'=>'1'
-        ]
+       ],
         ['sueldo'=>'5000',
         'apellido_paterno'=>'Perez',
         'apellido_materno'=>'Bernal',
@@ -35,7 +35,7 @@ class UserTableSeeder extends Seeder
         'email'=>'dominio2@gmail.com',
         'password'=>Hash::make('123456789'),
         'direccion'=>'2'
-        ]
+    ],
         ['sueldo'=>'5000',
         'apellido_paterno'=>'Vilchis',
         'apellido_materno'=>'Gonzalez',
@@ -45,7 +45,7 @@ class UserTableSeeder extends Seeder
         'email'=>'dominio2@gmail.com',
         'password'=>Hash::make('123456789'),
         'direccion'=>'3'
-        ]
+]
        ]);
     }
 }
