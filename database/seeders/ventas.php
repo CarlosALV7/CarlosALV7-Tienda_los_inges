@@ -22,7 +22,7 @@ class ventas extends Seeder
         'nombre_producto'=>'Pomada',
         'cantidad'=>'1',
         'costo'=>'45.50'
-        ]
+       ],
         ['Monto'=>'50.55',
         'iva'=>'8.08',
         'total'=>'58.63',
@@ -30,14 +30,16 @@ class ventas extends Seeder
         'nombre_producto'=>'Leche Alpura',
         'cantidad'=>'3',
         'costo'=>'45.50'
-        ]['Monto'=>'50.55',
+    ],
+        ['Monto'=>'50.55',
         'iva'=>'8.08',
         'total'=>'58.63',
         'rol'=>'Empleado',
         'nombre_producto'=>'Coca Cola 600ml',
         'cantidad'=>'4',
         'costo'=>'45.50'
-        ]['Monto'=>'50.55',
+],
+        ['Monto'=>'50.55',
         'iva'=>'8.08',
         'total'=>'58.63',
         'rol'=>'Empleado',

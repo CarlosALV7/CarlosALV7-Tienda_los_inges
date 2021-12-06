@@ -14,14 +14,14 @@ class CreateDireccionesTable extends Migration
     public function up()
     {
         Schema::create('direcciones', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('direccion_id');
             $table->string('colonia', 45);
             $table->string('calle', 45);
             $table->integer('no_exterior', 10);
             $table->integer('no_interior', 10);
             $table->integer('codigo_postal', 5);
-            $table->integer('estado_id'); 
-            $table->integer('municipio_id'); 
+            $table->smallIncrements('estado_id'); 
+            $table->smallIncrements('municipio_id'); 
             $table->foreign('estado_id')->references('id')->on('estados');
             $table->foreign('municipio_id')->references('id')->on('municipios');
         });
