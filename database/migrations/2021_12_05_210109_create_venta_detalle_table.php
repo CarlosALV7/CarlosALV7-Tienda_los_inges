@@ -14,12 +14,12 @@ class CreateVentaDetalleTable extends Migration
     public function up()
     {
         Schema::create('venta_detalle', function (Blueprint $table) {
-            $table->integer('venta_id');
-            $table->integer('producto_id'); 
-            $table->string('productos_vendidos', 45);
+            $table->smallIncrements('venta_id');
+            $table->smallIncrements('producto_id'); 
+            $table->smallIncrements('productos_vendidos');
             $table->decimal('precio', 5 ,2 );
-            $table->date('fecha_nacimiento');
-            $table->integer('usuario'); 
+            $table->date('fecha');
+            $table->smallIncrements('usuario'); 
             $table->foreign('usuario')->references('id')->on('usuarios');
         });
     }

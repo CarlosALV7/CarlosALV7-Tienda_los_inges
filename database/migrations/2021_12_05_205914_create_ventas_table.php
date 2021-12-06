@@ -14,7 +14,7 @@ class CreateVentasTable extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('venta_id');
             $table->decimal('monto',5 ,2); 
             $table->decimal('iva',5 ,2);
             $table->decimal('total',5 ,2);
