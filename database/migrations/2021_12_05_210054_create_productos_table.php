@@ -14,12 +14,12 @@ class CreateProductosTable extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('producto_id');
             $table->string('marca', 45);
             $table->integer('existencia');
             $table->decimal('precio', 5, 2);
             $table->string('fotografia', 45);
-            $table->integer('id_proveedor'); 
+            $table->smallIncrements('id_proveedor'); 
             $table->string('nombre', 45); 
             $table->string('descripcion', 45); 
             $table->foreign('id_proveedor')->references('id')->on('proveedores');
