@@ -16,7 +16,7 @@ class CreateVentasTable extends Migration
         Schema::create('ventas', function (Blueprint $table) {
             $table->mediumIncrements('id')->comment('ID de la venta');
             $table->decimal('monto',6,2);
-            $table->decimal('iva',2,2);
+            $table->decimal('iva',10,2);
             $table->decimal('total',10,2);
             $table->string('rol',45);
             $table->string('nombre_producto',45);
