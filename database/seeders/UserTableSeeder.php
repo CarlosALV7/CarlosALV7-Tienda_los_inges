@@ -15,37 +15,69 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-	   DB::table('usuarios')->insert([
-        ['sueldo'=>'12000',
-        'apellido_paterno'=>'Barragan',
-        'apellido_materno'=>'Espinoza',
-        'nombre'=>'Ernesto',
-        'fecha_nacimiento'=>'1996-10-10',
-        'rol'=>'Administrador',
-        'email'=>'dominio@gmail.com',
-        'password'=>Hash::make('123456789'),
-        'direccion'=>'1'
-       ],
-        ['sueldo'=>'5000',
-        'apellido_paterno'=>'Perez',
-        'apellido_materno'=>'Bernal',
-        'nombre'=>'Rosa',
-        'fecha_nacimiento'=>'1999-10-10',
-        'rol'=>'Empleado',
-        'email'=>'dominio2@gmail.com',
-        'password'=>Hash::make('123456789'),
-        'direccion'=>'2'
-    ],
-        ['sueldo'=>'5000',
-        'apellido_paterno'=>'Vilchis',
-        'apellido_materno'=>'Gonzalez',
-        'nombre'=>'Julia',
-        'fecha_nacimiento'=>'1993-10-10',
-        'rol'=>'Empleado',
-        'email'=>'dominio2@gmail.com',
-        'password'=>Hash::make('123456789'),
-        'direccion'=>'3'
-]
-       ]);
+        DB::table('usuarios')->insert([
+            [
+                'id' => 1,
+                'name' => 'Ernesto',
+                'primer_apellido' => 'Barragan',
+                'segundo_apellido' => 'Espinoza',
+                'sexo' => 'Masculino',
+                'fecha_nacimiento' => '1996-10-10',
+                'numero_celular' => '1234567895',
+                'numero_fijo' => null,
+                'email' => 'dominio@gmail.com',
+                'direcciones_id' => 1,
+                'email_verified_at' => null,
+                'rfc' => null,
+                'password' => Hash::make('123456789'),
+                'perfil' => 'Admin',
+                'estatus' => 'Activo',
+                'remember_token' => null,
+                'created_at' => '2021-09-30 11:16',
+                'updated_at' => '2021-09-30 11:16',
+            ],
+            [
+                
+                'id' => 2,
+                'name' => 'Juan',
+                'primer_apellido' => 'Aldama',
+                'segundo_apellido' => 'Gutierrez',
+                'sexo' => 'Masculino',
+                'fecha_nacimiento' => '1996-10-10',
+                'numero_celular' => '1234567895',
+                'numero_fijo' => null,
+                'email' => 'dominio1@gmail.com',
+                'direcciones_id' => 1,
+                'email_verified_at' => null,
+                'rfc' => null,
+                'password' => Hash::make('123456781'),
+                'perfil' => 'Admin',
+                'estatus' => 'Activo',
+                'remember_token' => null,
+                'created_at' => '2021-09-30 11:16',
+                'updated_at' => '2021-09-30 11:16',
+            ],
+            [
+                
+                'id' => 3,
+                'name' => 'José',
+                'primer_apellido' => 'Barragan',
+                'segundo_apellido' => 'Hernández',
+                'sexo' => 'Masculino',
+                'fecha_nacimiento' => '1996-10-10',
+                'numero_celular' => '1234567893',
+                'numero_fijo' => null,
+                'email' => 'dominio2@gmail.com',
+                'direcciones_id' => 1,
+                'email_verified_at' => null,
+                'rfc' => null,
+                'password' => Hash::make('123456789'),
+                'perfil' => 'Admin',
+                'estatus' => 'Activo',
+                'remember_token' => null,
+                'created_at' => '2021-09-30 11:16',
+                'updated_at' => '2021-09-30 11:16',
+            ]
+        ]);
     }
 }

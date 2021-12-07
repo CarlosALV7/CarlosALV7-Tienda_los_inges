@@ -7,41 +7,87 @@ use Illuminate\Support\Facades\DB;
 
 class venta_detalle extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-	   DB::table('venta_detalle')->insert([
-        ['precio'=>'55.50',
-        'fecha'=>'2021-12-09',
-       ],
-        ['precio'=>'66',
-        'fecha'=>'2021-09-10',
-    ],
-        ['precio'=>'120',
-        'fecha'=>'2021-03-24',
-],
-        ['precio'=>'55.50',
-        'fecha'=>'2021-12-09',
-],
-        ['precio'=>'66',
-        'fecha'=>'2021-09-10',
-],
-        ['precio'=>'120',
-        'fecha'=>'2021-03-24',
-],
-        ['precio'=>'55.50',
-        'fecha'=>'2021-12-09',
-],
-        ['precio'=>'66',
-        'fecha'=>'2021-09-10',
-],
-        ['precio'=>'120',
-        'fecha'=>'2021-03-24',
-        ]
-       ]);
-    }
+        /**
+         * Run the database seeds.
+         *
+         * @return void
+         */
+        public function run()
+        {
+                DB::table('ventas_detalle')->insert([
+                        [
+                                'id' => 1,
+                                'producto_id' => 2,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 59.00,
+                                'fecha' => '2021-12-1',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 2,
+                                'producto_id' => 2,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 60.00,
+                                'fecha' => '2021-12-1',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 3,
+                                'producto_id' => 1,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 59.00,
+                                'fecha' => '2021-12-1',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 4,
+                                'producto_id' => 1,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 57.00,
+                                'fecha' => '2021-12-1',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 5,
+                                'producto_id' => 1,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 54.00,
+                                'fecha' => '2021-12-6',
+                                'usuario_id' => 3
+
+                        ],
+                        [
+                                'id' => 6,
+                                'producto_id' => 2,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 53.00,
+                                'fecha' => '2021-12-5',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 7,
+                                'producto_id' => 1,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 20.00,
+                                'fecha' => '2021-12-4',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 8,
+                                'producto_id' => 2,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 40.00,
+                                'fecha' => '2021-12-3',
+                                'usuario_id' => 3
+                        ],
+                        [
+                                'id' => 9,
+                                'producto_id' => 1,
+                                'productos_vendidos' => 'Sabritas,cocacola',
+                                'precio' => 50.00,
+                                'fecha' => '2021-12-2',
+                                'usuario_id' => 3
+                        ]
+                ]);
+        }
 }

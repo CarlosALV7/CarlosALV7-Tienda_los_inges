@@ -14,35 +14,47 @@ class productos extends Seeder
      */
     public function run()
     {
-	   DB::table('productos')->insert([
-        ['Marca'=>'Sabritas',
-        'existencia'=>'22',
-        'Precio'=>'16.00',
-        'fotografia'=>'1.jpg',
-        'nombre'=>'Dorito Incognita',
-        'Descripcion'=>'Totopos de maiz con saborizante'
-       ],
-        ['Marca'=>'Sabritas',
-        'existencia'=>'28',
-        'Precio'=>'11.00',
-        'fotografia'=>'2.jpg',
-        'nombre'=>'Cheetos Flamin Hot',
-        'Descripcion'=>'Cheetos'
-    ],
-        ['Marca'=>'Sabritas',
-        'existencia'=>'23',
-        'Precio'=>'16.00',
-        'fotografia'=>'3.jpg',
-        'nombre'=>'Dorito Nacho',
-        'Descripcion'=>'Totopos de maiz con saborizante'
-],
-        ['Marca'=>'Sabritas',
-        'existencia'=>'28',
-        'Precio'=>'11.00',
-        'fotografia'=>'4.jpg',
-        'nombre'=>'Cheetos Torciditos',
-        'Descripcion'=>'Cheetos'
-        ]
-       ]);
+        DB::table('productos')->insert([
+            [
+                'id' => 1,
+                'producto' => 'Sabritas',
+                'existencias' => 22,
+                'precio_unitario' => 16.00,
+                'fotografia' => '1.jpg',
+                'descripcion' => 'Frituras',
+                'estatus' => 'Activo',
+                'proveedor_id' => 1
+            ],
+            [
+                'id' => 2,
+                'producto' => 'Sabritas',
+                'existencias' => 28,
+                'precio_unitario' => 11.00,
+                'fotografia' => '2.jpg',
+                'descripcion' => 'Frituras',
+                'estatus' => 'Activo',
+                'proveedor_id' => 1
+            ],
+            [
+                'id' => 3,
+                'producto' => 'Sabritas',
+                'existencias' => '23',
+                'precio_unitario' => '16.00',
+                'fotografia' => '3.jpg',
+                'descripcion' => 'Frituras',
+                'estatus' => 'Activo',
+                'proveedor_id' => 1
+            ],
+            [
+                'id' => 4,
+                'producto' => 'Sabritas',
+                'existencias' => '28',
+                'precio_unitario' => '11.00',
+                'fotografia' => '4.jpg',
+                'descripcion' => 'Frituras',
+                'estatus' => 'Activo',
+                'proveedor_id' => 1
+            ]
+        ]);
     }
 }

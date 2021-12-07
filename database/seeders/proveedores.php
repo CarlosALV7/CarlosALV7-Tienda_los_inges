@@ -14,27 +14,42 @@ class proveedores extends Seeder
      */
     public function run()
     {
-	   DB::table('proveedores')->insert([
-        ['Proveedor'=>'Sabritas',
-        'dias_semana_visita'=>'Martes-Jueves',
-        'Telefono'=>'7298756313'
-       ],
-        ['Proveedor'=>'Alpura',
-        'dias_semana_visita'=>'Martes-Viernes',
-        'Telefono'=>'7298756313'
-    ],
-        ['Proveedor'=>'Coca Cola',
-        'dias_semana_visita'=>'Martes-Jueves-Sabado',
-        'Telefono'=>'7298756313'
-],
-        ['Proveedor'=>'Barcel',
-        'dias_semana_visita'=>'Martes-Jueves',
-        'Telefono'=>'7298756313'
-],
-        ['Proveedor'=>'Grupo Corona',
-        'dias_semana_visita'=>'Sabado',
-        'Telefono'=>'7298756313'
-        ]
-       ]);
+        DB::table('proveedores')->insert([
+            [
+                'id' => 1,
+                'proveedor' => 'Sabritas',
+                'dias_semana' => 2,
+                'telefono' => '7298756313',
+                'direcciones_id'=>1
+            ],
+            [
+                'id' => 2,
+                'proveedor' => 'Alpura',
+                'dias_semana' => 2,
+                'telefono' => '7298756313',
+                'direcciones_id'=>2
+            ],
+            [
+                'id' => 3,
+                'proveedor' => 'Coca Cola',
+                'dias_semana' => 3,
+                'telefono' => '7298756313',
+                'direcciones_id'=>2
+            ],
+            [
+                'id' => 4,
+                'proveedor' => 'Barcel',
+                'dias_semana' =>2,
+                'telefono' => '7298756313',
+                'direcciones_id'=>1
+            ],
+            [
+                'id' => 5,
+                'proveedor' => 'Grupo Corona',
+                'dias_semana' => 1,
+                'telefono' => '7298756313',
+                'direcciones_id'=>2
+            ]
+        ]);
     }
 }
