@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Usuario;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Http\Controllers\API\Productos;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,7 +17,7 @@ use Illuminate\Validation\ValidationException;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::resource('productos', productos :: class);
 Route::middleware('auth:sanctum')->get('/usuario', function (Request $request) {
     return $request->usuario();
 });
